@@ -22,5 +22,5 @@ urlpatterns = [
     path('', dashboard, name="dashboard"),
     path('generate/', generate, name="generate"),
     path('deleteurl/', deleteurl, name="deleteurl"),
-    path('<str:query>/', home, name="home"),
+    path('tinyurl.com/<str:query>', home, name="home"),
 ]

@@ -3,15 +3,12 @@ from django.contrib import messages
 from .models import shorturl
 import random
 import string
+import pyshorteners as sh
 
 # Create your views here.
 def dashboard(request):
     urls = shorturl.objects.all()
     return render(request, 'dashboard.html', {'urls': urls})
-
-
-def randomgen():
-    return ''.join(random.choice(string.ascii_lowercase) for _ in range(6))
 
 def generate(request):
     if request.method == "POST":
@@ -38,7 +35,9 @@ def generate(request):
             original = request.POST['original']
             generated = False
             while not generated:
-                short = randomgen()
+                s = sh.Shortener()
+                short=s.tinyurl.short(original)
+                short=short.replace('https://','')
                 check = shorturl.objects.filter(short_query=short)
                 if not check:
                     newurl = shorturl(
@@ -57,17 +56,19 @@ def generate(request):
 
 
 def home(request, query=None):
+    print(query)
     if not query or query is None:
-        return render(request, 'home.html')
+        return render(request, 'dashboard.html')
     else:
         try:
-            check = shorturl.objects.get(short_query=query)
+            check = shorturl.objects.get(short_query='tinyurl.com/'+query)
+            print(check)
             check.visits = check.visits + 1
             check.save()
             url_to_redirect = check.original_url
             return redirect(url_to_redirect)
         except shorturl.DoesNotExist:
-            return render(request, 'home.html', {'error': "error"})
+            return render(request, 'dashboard.html', {'error': "error"})
 
 # added delete URl
 def deleteurl(request):
