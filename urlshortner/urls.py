@@ -15,7 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from shortner.views import dashboard, generate, home, deleteurl
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', dashboard, name="dashboard"),
+    path('generate/', generate, name="generate"),
+    path('deleteurl/', deleteurl, name="deleteurl"),
+    path('<str:query>/', home, name="home"),
 ]
