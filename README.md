@@ -1,7 +1,14 @@
 # Url Shortner by Nagadeep Sharma
 [https://nagadeep.netlify.com](https://nagadeep.netlify.com)
 
-Project URL: https://oururlshortner.herokuapp.com/
+# Prerequisites
+
+1. Python
+2. Django
+3. Html & Css
+4. Pyshorteners
+
+Project URL: https://urlshortner.herokuapp.com/
 
 URL shortening is a technique on the World Wide Web that enables the Uniform Resource Locator to be made considerably shorter and still direct to the desired page. This is done by using a redirect path to a web page that has a long URL.
 
@@ -15,16 +22,16 @@ It has been deployed on Heroku. If you want then you can buy a domain and connec
 ## Screenshots
 
 1) Home Page
-![Screenshot 2021-11-12 124452](https://user-images.githubusercontent.com/52284162/141425871-2559bdd7-b34f-4d51-9287-158b2712d518.png)
+![Screenshot (22)](https://user-images.githubusercontent.com/52284162/141467940-5f3df9d4-665f-4528-ae36-a1863052dc88.png)
 
 2) Entered the link in the text field and clicked submit
-![2021-11-12](https://user-images.githubusercontent.com/52284162/141425913-d1ecab72-2735-40aa-8f87-53b34cb5927d.png)
+![Screenshot (23)](https://user-images.githubusercontent.com/52284162/141467974-3bbde994-6c2e-4e5d-968e-3599dcb2a0fc.png)
 
 3) Opened a new tab with clicking
-![2021-11-12 (2)](https://user-images.githubusercontent.com/52284162/141426040-480b2aa8-8de1-4f58-8cfb-6e53fb44bdd2.png)
+![Screenshot (24)](https://user-images.githubusercontent.com/52284162/141467996-0531ec0c-9c0d-45be-a4de-c98eab189fe3.png)
 
 5) Visits Increased by1
-![2021-11-12 (3)](https://user-images.githubusercontent.com/52284162/141426107-97ec58ca-d971-4e91-aa6d-fd4cd4fe307c.png)
+![Screenshot (25)](https://user-images.githubusercontent.com/52284162/141468034-f0969593-b837-4cd7-af16-664036472ced.png)
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
